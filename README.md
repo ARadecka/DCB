@@ -2,30 +2,42 @@
 Anna Radecka,
 Pawel Mizera
 
-#”Technologie konwergentnego data-center: DCB”
+# ”Technologie konwergentnego data-center: DCB”
 
-DCB to skrót od Data Center Bridging inaczej Mostkowanie Centrum Danych. Jest to zestaw standardów IEEE (Institute of Electrical and Electronics Engineers) umożliwiających działanie konwergentnych sieci szkieletowych w centrach danych, w których magazyn, sieć danych, komunikacja IPC klastrów i ruch związany z zarządzaniem działają w tej samej infrastrukturze sieci Ethernet. DCB zawiera również sprzętowe możliwości przydziału przepustowości dla określonego typu ruchu i zwiększa niezawodność transportu w sieci Ethernet dzięki sterowaniu przepływem na podstawie priorytetu. Przydzielanie przepustowości niezbednie jest oparte na sprzęcie, w momencie gdy ruch omija system operacyjny i jest odciążany do karty sieci konwergentnej, która może  obsługiwać interfejs iSCSI (Internet Small Computer System Interface), zdalny bezpośredni dostęp do pamięci (RDMA) przez konwergentną sieć Ethernet lub protokół FCoE (Fiber Channel over Ethernet). Niezbędne jest również oparcie sterowania przepływem na priorytetach kiedy protokół warstwy wyższej, np. Fiber Channel, zakłada bezstratny transport w warstwie niższej. 
+DCB to skrót od Data Center Bridging (inaczej Mostkowanie Centrum Danych). Jest to zestaw standardów IEEE (Institute of Electrical and Electronics Engineers) umożliwiających działanie konwergentnych sieci szkieletowych w centrach danych, w których magazyn, sieć danych, komunikacja IPC klastrów i ruch związany z zarządzaniem działają w tej samej infrastrukturze sieci Ethernet. 
+
+DCB zawiera również sprzętowe możliwości przydziału przepustowości dla określonego typu ruchu i zwiększa niezawodność transportu w sieci Ethernet dzięki sterowaniu przepływem na podstawie priorytetu. 
+
+[_poniższe zdanie jest nie po polsku_]:
+
+Przydzielanie przepustowości niezbednie jest oparte na sprzęcie, w momencie gdy ruch omija system operacyjny i jest odciążany do karty sieci konwergentnej, która może obsługiwać interfejs iSCSI (Internet Small Computer System Interface), zdalny bezpośredni dostęp do pamięci (RDMA) przez konwergentną sieć Ethernet lub protokół FCoE (Fiber Channel over Ethernet). Niezbędne jest również oparcie sterowania przepływem na priorytetach, _zwłaszcza w sytuacji, gdy_ protokół warstwy wyższej, np. Fiber Channel, zakłada bezstratny transport w warstwie niższej. 
 
 <img src="https://image.slidesharecdn.com/sdnenableddatacenterbridging-130829131938-phpapp01/95/sdnenabled-data-center-bridging-9-638.jpg?cb=1377782467">
 
-Najważniejszymi funkcjami jakie zapewnia DCB jest:
+Najważniejszymi funkcjami, jakie zapewnia DCB:
 
 * Zapewnienie współpracy między kartami sieciowymi i przełącznikami z obsługą funkcji DCB.
-* Zapewnienie bezstratną transmisję za pośrednictwem sieci Ethernet między komputerem z systemem Windows Serwer 2012 i sąsiadującym przełącznikiem przez włączenie w karcie sieciowej sterowania przepływem na podstawie priorytetów.
+* Zapewnienie bezstratnej transmisji za pośrednictwem sieci Ethernet między komputerem z systemem Windows Serwer 2012 i sąsiadującym przełącznikiem przez włączenie w karcie sieciowej sterowania przepływem na podstawie priorytetów.
 *	Zapewnienie bezstratnej transmisji za pośrednictwem sieci Ethernet między komputerem z systemem Windows Server 2012 i sąsiadującym przełącznikiem przez włączenie w karcie sieciowej sterowania przepływem na podstawie priorytetów.
+
+[_dwa powyższe to to samo, a do tego co ma akurat Server 2012 do tego_]
+
 *	Umożliwienie przydzielenia wartości procentowej przepustowości do kontroli ruchu, gdzie kontrola ruchu może składać się z co najmniej jednej klasy ruchu rozróżnianej na podstawie wartości 802.1p.
 *	Umożliwienie administratorom serwera lub administratorom sieci przypisanie aplikacji do określonej klasy ruchu lub priorytetu na podstawie dobrze znanych protokołów, dobrze znanego portu TCP/UDP lub portu NetworkDirect używanego przez tę aplikację.
 *	Zapewnienie możliwości zarządzania funkcją DCB przy użyciu infrastruktury Instrumentacji zarządzania Windows (WMI) i programu Windows PowerShell w systemie Windows Server 2012.
 *	Zapewnienie możliwości zarządzania funkcją DCB przy użyciu zasad grupy w systemie Windows Server 2012.
 *	Obsługiwanie współistnienia rozwiązań jakości usług (QoS) w systemie Windows Server 2012.
 
+_wszystko powyższe dotyczy tylko Win 2012 Server, czemu?_
 
 Aby osiągnąć swoje cele DCB stworzyło i obecnie tworzy nowe standardy. Maja one za zadanie albo rozszerzać obecne protokoły Ethernetu albo emulować połączenia oferowane poprzez Ethernet. Są one tworzone w oparciu o dwa główne standardy:
 
 * The Institute of Electrical and Electronics Engineers (IEEE)
 *	Internet Engineering Task Force (IETF). 
 
-Przy nieregularnych topologiach sieci oraz bez specjalnych ruterów DCB może spowodować deadlocks, długie buforowanie i blokowanie. 
+_to nie standardy, tylko instytucje standaryzujące_
+
+Przy nieregularnych topologiach sieci oraz bez specjalnych routerów DCB może spowodować zakleszczenia, długie buforowanie i blokowanie. 
 
 Architektura DCB, która jest oparta na kolekcji otwartych standardów rozszerzeń Ethernetu stworzonych w oparciu o IEEE 802.1, skupia się ona na polepszeniu i rozszerzeniu łączności sieciowej Ethernetu i jej zarządzaniu kompatybilnością w Data Center. 
 IEEE DCB buduje w oparciu o klasyczne zalety Ethernetu dodając wiele potrzebnych rozszerzeń by pozwolić na lepsza strukturę w sieciach data center i tworzy jednolita infrastrukturę. 
