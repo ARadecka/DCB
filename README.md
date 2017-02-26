@@ -51,4 +51,4 @@ Te nowe protokoły wymagają nowych urządzeń oraz oprogramowania zarówno doty
 Aby Mostkowanie Centrum Danych dzialo  jest wymagana karta sieciowa Ethernet obsługująca funkcję DCB zainstalowanych w komputerach, na których uruchomiona jest funkcja DCB w systemie Windows Server 2012 oraz wymagane jest wdrożenia przełączników sprzętowych z obsługą funkcji DCB w sieci.
 
 * Źródła: https://www1.cisco.com/ https://technet.microsoft.com/en-us/library/hh849179(v=ws.11).aspx
-* Więcej informacji można znaleźć w : http://searchconvergedinfrastructure.techtarget.com/definition/data-center-bridging-DCB http://www.cisco.com/c/en/us/solutions/data-center-virtualization/ieee-802-1-data-center-bridging/index.html https://docs.oracle.com/cd/E26502_01/html/E28993/gmfbf.html http://www.ieee802.org/1/pages/dcbridges.html
+* Więcej informacji można znaleźć w : http://searchconvergedinfrastructure.techtarget.com/definition/data-center-bridging-DCB http://www.cisco.com/c/en/us/solutions/data-center-virtualization/ieee-802-1-data-center-bridging/index.html https://docs.oracle.com/cd/E26502_01/html/E28993/gmfbf.html
